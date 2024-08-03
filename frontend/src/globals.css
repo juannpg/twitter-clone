@@ -1,0 +1,13 @@
+.main {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 15px;
+}
+
+.link {
+  color: #2b92ff;
+  text-decoration: none;
+}
