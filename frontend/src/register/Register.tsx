@@ -9,6 +9,21 @@ function Register() {
       <img src="https://img.icons8.com/?size=100&id=jlpBF1fJe9fs&format=png&color=FFFFFF" alt="twitterLogo" className="twitterLogo" />
       <div className="login">
         <h1>Crea tu cuenta</h1>
+        <div className="inputContainer">
+          <input
+            className='classicInput'
+            type="text"
+            placeholder="Nombre"
+          />
+          <input
+            className='classicInput'
+            type="text"
+            placeholder='Correo electrónico'
+          />
+          <button
+            className='classicButton'
+          >Siguiente</button>
+        </div>
         <Link 
           className='link'
           to="/"

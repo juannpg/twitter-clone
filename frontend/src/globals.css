@@ -7,7 +7,35 @@
   padding: 15px;
 }
 
+.classicButton {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  margin: 2px;
+  cursor: pointer;
+  height: 45px;
+  width: 100%;
+}
+
+.classicInput {
+  width: 100%;
+  height: 45px;
+  border-radius: 25px;
+  border: none;
+  padding: 10px;
+  font-size: 17px;
+  margin: 2px;
+}
+
 .link {
   color: #2b92ff;
   text-decoration: none;
+}
+
+.twitterLogo {
+  width: 60px;
 }

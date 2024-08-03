@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import './globals.css'
@@ -14,7 +13,7 @@ function App() {
         <h1>Únete a X hoy</h1>
         <div className="buttonContainer">
           <button
-            className="loginButton"
+            className="classicButton"
             onClick={() => 
               navigate('/login')
             }
@@ -27,7 +26,7 @@ function App() {
           </div>
 
           <button
-            className='registerButton'
+            className='classicButton'
             onClick={() => 
               navigate('/register')
             }
