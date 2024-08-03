@@ -1,4 +1,4 @@
-html, # body {
+html, #body {
   height: 100%;
 }
 
@@ -8,12 +8,21 @@ html, # body {
   align-items: center;
 }
 
+.main {
+  display: flex;
+  justify-content: center;
+}
+
 .header {
   display: flex;
   justify-content: center;
-  
-  border-style: solid;
-  border-color: rgb(0, 238, 255);
+  width: 100%;
+
+  /* position absolute posiciona el elemento rompiendo con el flujo normal de los elementos en relacion al contenedor posicionado mas cercano. un contenedor posicionado es aquel que tiene un position: distinto a static, que es lo por defecto. como no hay ninguno, lo situa con el elemento html
+
+  top: 0 indica que el elemento se situa arriba del todo del contenedor posicionado */
+  position: absolute;
+  top: 0;
 }
 
 .body {
@@ -23,9 +32,6 @@ html, # body {
   flex-direction: column;
   color: white;
   padding: 15px;
-
-  border-style: solid;
-  border-color: red;
 }
 
 .classicButton {
@@ -59,4 +65,5 @@ html, # body {
 
 .twitterLogo {
   width: 60px;
+  margin-top: 15px;
 }
