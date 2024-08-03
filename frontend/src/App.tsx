@@ -8,31 +8,37 @@ function App() {
 
   return (
     <div className="main">
-      <img src="https://img.icons8.com/?size=100&id=jlpBF1fJe9fs&format=png&color=FFFFFF" alt="twitterLogo" className="twitterLogo" />
-      <div className="app">
-        <h1>Únete a X hoy</h1>
-        <div className="buttonContainer">
-          <button
-            className="classicButton"
-            onClick={() => 
-              navigate('/login')
-            }
-          >Iniciar sesión</button>
+      
+      <div className="header">
+        <img src="https://img.icons8.com/?size=100&id=jlpBF1fJe9fs&format=png&color=FFFFFF" alt="twitterLogo" className="twitterLogo" />
+      </div>
 
-          <div className="line-container">
-            <div className="line"></div>
-            <div className="circle"></div>
-            <div className="line"></div>
+      <div className="body">
+        <div className="app">
+          <h1>Únete a X hoy</h1>
+          <div className="buttonContainer">
+            <button
+              className="classicButton"
+              onClick={() => 
+                navigate('/login')
+              }
+            >Iniciar sesión</button>
+  
+            <div className="line-container">
+              <div className="line"></div>
+              <div className="circle"></div>
+              <div className="line"></div>
+            </div>
+            
+            <button
+              className='classicButton'
+              onClick={() => 
+                navigate('/register')
+              }
+            >Crear cuenta</button>
+            
+            <p className='terms'>Al registrarte, aceptas los <span className='blue'>Términos de servicio</span> y la <span className='blue'>Política de privacidad</span>, incluida la política de <span className='blue'>Uso de Cookies</span>.</p>
           </div>
-
-          <button
-            className='classicButton'
-            onClick={() => 
-              navigate('/register')
-            }
-          >Crear cuenta</button>
-          
-          <p className='terms'>Al registrarte, aceptas los <span className='blue'>Términos de servicio</span> y la <span className='blue'>Política de privacidad</span>, incluida la política de <span className='blue'>Uso de Cookies</span>.</p>
         </div>
       </div>
     </div>

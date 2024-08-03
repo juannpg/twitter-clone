@@ -1,4 +1,4 @@
-html, #body {
+html, # body {
   height: 100%;
 }
 
@@ -8,13 +8,24 @@ html, #body {
   align-items: center;
 }
 
-.main {
+.header {
+  display: flex;
+  justify-content: center;
+  
+  border-style: solid;
+  border-color: rgb(0, 238, 255);
+}
+
+.body {
   align-items: center;
   text-align: center;
   display: flex;
   flex-direction: column;
   color: white;
   padding: 15px;
+
+  border-style: solid;
+  border-color: red;
 }
 
 .classicButton {
