@@ -15,7 +15,8 @@ function App() {
 
       <div className="body">
         <div className="app">
-          <h1>Únete a X hoy</h1>
+          <h1>Lo que está <br /> pasando ahora</h1>
+          <h2>Únete Hoy</h2>
           <div className="buttonContainer">
             <button
               className="classicButton"
@@ -32,6 +33,7 @@ function App() {
             
             <button
               className='classicButton'
+              id='blue'
               onClick={() => 
                 navigate('/register')
               }

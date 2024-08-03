@@ -48,6 +48,11 @@ html, #body {
   width: 100%;
 }
 
+.classicButton#blue {
+  background-color: #2b92ff;
+  color: rgb(255, 255, 255);
+}
+
 .classicInput {
   width: 100%;
   height: 45px;
