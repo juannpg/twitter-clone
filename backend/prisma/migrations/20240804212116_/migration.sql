@@ -14,6 +14,7 @@ CREATE TABLE "Tweet" (
     "id" SERIAL NOT NULL,
     "content" TEXT NOT NULL,
     "userId" INTEGER NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "Tweet_pkey" PRIMARY KEY ("id")
 );
@@ -23,9 +24,19 @@ CREATE TABLE "Reply" (
     "id" SERIAL NOT NULL,
     "content" TEXT NOT NULL,
     "tweetId" INTEGER NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "userId" INTEGER NOT NULL,
 
     CONSTRAINT "Reply_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "Like" (
+    "id" SERIAL NOT NULL,
+    "tweetId" INTEGER NOT NULL,
+    "replyId" INTEGER NOT NULL,
+
+    CONSTRAINT "Like_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateIndex
@@ -45,3 +56,9 @@ ALTER TABLE "Reply" ADD CONSTRAINT "Reply_tweetId_fkey" FOREIGN KEY ("tweetId") 
 
 -- AddForeignKey
 ALTER TABLE "Reply" ADD CONSTRAINT "Reply_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Like" ADD CONSTRAINT "Like_tweetId_fkey" FOREIGN KEY ("tweetId") REFERENCES "Tweet"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Like" ADD CONSTRAINT "Like_replyId_fkey" FOREIGN KEY ("replyId") REFERENCES "Reply"("id") ON DELETE RESTRICT ON UPDATE CASCADE;

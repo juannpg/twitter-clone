@@ -1,19 +1,13 @@
+import { useState } from 'react';
+
 import '../globals.css'
 import './Dashboard.css'
 
-const TweetFeed = ({text, num}:{text: string, num: number}) => {
-  return (
-    <div className='tweetFeed'>
-      <p>{text}</p>
-      <p>{num}</p>
-    </div>
-  )
-}
+import TweetFeed from '../components/TweetFeed/TweetFeed';
 
 function Dashboard() {
-  var TEST = 'DIOS DIOS DIOS';
-  var TEST2 = 1;
-  
+  const [tweet, setTweet] = useState('');
+
   return (
     <div className="main">
       <div className="header">
@@ -23,13 +17,33 @@ function Dashboard() {
         <div className="dashboard">
           <h2>Bienvenido a X, <span className='username'>{localStorage.getItem('username')}</span>.</h2>
           <div className="tweet">
-            <h3>Escribir un tweet</h3>
+            <h3>Escribir un tweet:</h3>
+              <div className="writeTweet">
+                <textarea
+                  className='tweetInput'
+                  placeholder="Escribe aquí tu tweet..."
+                  onChange={(e) => setTweet(e.target.value)}
+                >
+                </textarea>
+                <button
+                  className='sendButton'
+                  onClick={() =>
+                    alert('Enviar' + tweet)
+                  }
+                >Enviar</button>
+              </div>
           </div>
           <div className="feed">
-            <h3>Tweets recientes</h3>
+            <h3>Tweets recientes:</h3>
               <TweetFeed
-                text={TEST}
-                num={TEST2}
+                username="juannpg"
+                tweet="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium."
+                likes={240}
+              />
+              <TweetFeed
+                username="Pablodlh"
+                tweet="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes."
+                likes={520}
               />
           </div>
         </div>
