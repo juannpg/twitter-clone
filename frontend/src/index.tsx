@@ -5,6 +5,7 @@ import './index.css';
 import App from './App';
 import Login from './login/Login';
 import Register from './register/Register';
+import Dashboard from './dashboard/Dashboard';
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(
@@ -14,6 +15,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Router>
   </React.StrictMode>
