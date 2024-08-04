@@ -28,6 +28,7 @@ model Tweet {
   content     String
   user        User     @relation(fields: [userId], references: [id])
   userId      Int
+  createdAt   DateTime @default(now())
   replies     Reply[]
 }
 
@@ -37,5 +38,6 @@ model Reply {
   tweet       Tweet    @relation(fields: [tweetId], references: [id])
   tweetId     Int
   user        User     @relation(fields: [userId], references: [id])
+  createdAt   DateTime @default(now())
   userId      Int
 }
