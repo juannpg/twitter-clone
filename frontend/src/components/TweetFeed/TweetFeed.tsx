@@ -5,7 +5,7 @@ import './TweetFeed.css'
 const TweetFeed = ({username, tweet, likes}:{username: string, tweet: string, likes: number}) => {
   return (
     <div className='tweetFeed'>
-      <h3>@{username}</h3>
+      <h4>@{username}</h4>
       <div className="tweetContent">
         <p>{tweet}</p>
       </div>
@@ -18,6 +18,7 @@ const TweetFeed = ({username, tweet, likes}:{username: string, tweet: string, li
         >{likes} Likes</p>
         <Link to='/replie'>Reply</Link>
       </div>
+      <div className="line"></div>
     </div>
   )
 }

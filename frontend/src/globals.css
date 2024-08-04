@@ -11,9 +11,6 @@ html, #body {
 .main {
   display: flex;
   justify-content: center;
-
-  border-style: solid;
-  border-color: red;
 }
 
 .header {
@@ -102,4 +99,17 @@ h1, h2 {
 
 h2 {
   font-size: 30px;
+}
+
+.line-container {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 10px;
+}
+
+.line {
+  flex: 1;
+  height: 0.5px;
+  background-color: #333;
 }
