@@ -1,15 +1,16 @@
 import '../globals.css'
 import './Dashboard.css'
 
+const tweetFeed = ({text}) => { 
+  return (
+    <div className='tweetFeed'>
+      <p>{text}</p>
+    </div>
+  )
+}
+
 function Dashboard() {
-  function tweetFeed() {
-    return (
-      <div className='tweetFeed'>
-        <p>Hola mundo</p>
-        
-      </div>
-    )
-  }
+  var TEST = 'TEST';
 
   return (
     <div className="main">
@@ -24,7 +25,7 @@ function Dashboard() {
           </div>
           <div className="feed">
             <h3>Tweets recientes</h3>
-              {tweetFeed()}
+              <tweetFeed text={TEST}/>
           </div>
         </div>
       </div>
