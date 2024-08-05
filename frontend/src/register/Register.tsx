@@ -26,19 +26,21 @@ function Register() {
     });
 
     const log = await response.json();
-    console.log(log);
 
     if (response.status === 201) {
       alert('Usuario creado correctamente');
       navigate('/login');
+      console.log(log);
     } 
 
     if (response.status === 400) {
       alert('Completa todos los campos');
+      console.error(log);
     }
     
     if (response.status !== 201 && response.status !== 400) {
       alert('Error al crear el usuario');
+      console.error(log);
     }
   }
 

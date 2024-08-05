@@ -51,7 +51,6 @@ function Dashboard() {
       },
     });
     const log = await response.json();
-    console.log(log);
     const username = log.user.username;
 
     if (response.status === 200) {
@@ -67,16 +66,19 @@ function Dashboard() {
         }),
       });
       
+      console.log(log);
       const log2 = await response2.json();
-      console.log(log2);
 
       if (response2.status === 201) {
+        console.log(log2);
         alert('Tweet enviado correctamente');
         window.location.reload();
       } else {
+        console.error(log2);
         alert('Error enviando tweet');
       }
     } else {
+      console.error(log);
       alert('Error en el token');
     }
   }

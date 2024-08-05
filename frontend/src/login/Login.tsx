@@ -24,9 +24,9 @@ function Login() {
     });
 
     const log = await response.json();
-    console.log(log);
 
     if (response.status === 200) {
+      console.log(log);
       alert('Inicio de sesión correcto');
       localStorage.setItem('username', username);
       localStorage.setItem('token', log.token);
@@ -35,10 +35,12 @@ function Login() {
     } 
 
     if (response.status === 400) {
+      console.error(log);
       alert('Completa todos los campos');
     }
     
     if (response.status !== 200 && response.status !== 400) {
+      console.error(log);
       alert('Usuario o contraseña incorrectos');
     }
   }
