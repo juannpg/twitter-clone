@@ -32,6 +32,16 @@ function Dashboard() {
     getTweets();
   }, []);
 
+  const validateTweet = () => {
+    if (tweet.length > 250) {
+      alert('El tweet no puede tener más de 250 caracteres');
+      setTweet('');
+      window.location.reload();
+    } else {
+      writeTweet();
+    }
+  }
+
   const writeTweet = async () => {
     // gets token so we can get username
     const response = await fetch(`http://localhost:3001/api/routers/tweets/token?token=${token}`, {
@@ -91,7 +101,7 @@ function Dashboard() {
                 <button
                   className='sendButton'
                   onClick={() =>
-                    writeTweet()
+                    validateTweet()
                   }
                 >Enviar</button>
               </div>
