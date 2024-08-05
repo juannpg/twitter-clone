@@ -30,6 +30,9 @@ function Dashboard() {
       headerElement.style.left = '0';
       headerElement.style.top = '0';
       headerElement.style.bottom = '0';
+
+      const dashboardElement = document.querySelector('.dashboard') as HTMLElement;
+      dashboardElement.style.marginTop = '250px';
     }
 
     setTweets(log.tweets);
