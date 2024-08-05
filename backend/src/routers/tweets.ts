@@ -61,7 +61,6 @@ router.post('/writeTweet', async (req, res) => {
       data: {
         username: username,
         content: content,
-        createdAt: new Date(),
       },
     })
 
