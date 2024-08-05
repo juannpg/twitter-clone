@@ -38,8 +38,8 @@ router.get('/getTweets', async (req, res) => {
     const tweets = await prisma.tweet.findMany({
       where: {
         createdAt: {
-          gte: yesterday,
-          lte: today,
+          gte: yesterday, //greater than or equal to yesterday
+          lte: today, //less than or equal to today
         }
       },
       select: {
