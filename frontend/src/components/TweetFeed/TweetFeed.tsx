@@ -16,7 +16,7 @@ const TweetFeed = ({username, tweet, likes}:{username: string, tweet: string, li
             alert('Like')
           }
         >{likes} Likes</p>
-        <Link className='replyLink' to='/replie'>Reply</Link>
+        <Link className='replyLink' to='/reply'>Responder</Link>
       </div>
       <div className="lineTweet"></div>
     </div>
