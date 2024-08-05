@@ -17,10 +17,6 @@ html, #body {
   display: flex;
   justify-content: center;
   width: 100%;
-
-  /* position absolute posiciona el elemento rompiendo con el flujo normal de los elementos en relacion al contenedor posicionado mas cercano. un contenedor posicionado es aquel que tiene un position: distinto a static, que es lo por defecto. como no hay ninguno, lo situa con el elemento html
-
-  top: 0 indica que el elemento se situa arriba del todo del contenedor posicionado */
   position: absolute;
   top: 0;
 }
