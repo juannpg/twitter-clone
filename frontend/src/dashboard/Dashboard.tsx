@@ -111,7 +111,7 @@ function Dashboard() {
               </div>
           </div>
           <div className="feed">
-            <h3>Tweets de hoy:</h3>
+            <h3>Tweets en las últimas 24 horas:</h3>
             {/* iterates through the tweets and displays them */}
             {tweets.map((tweet: {
               username: string;
