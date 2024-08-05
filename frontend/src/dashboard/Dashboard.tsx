@@ -28,6 +28,7 @@ function Dashboard() {
   }
 
   //gets the tweets when the component is loaded
+  //useEffect allows the code inside the effect to run only after the render is completed, and not during the render cycle itself.
   useEffect(() => {
     getTweets();
   }, []);
