@@ -12,6 +12,10 @@
   }
 }
 
+html {
+  overflow: hidden;
+}
+
 .dashboard {
   display: flex;
   flex-direction: column;
