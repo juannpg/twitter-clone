@@ -66,7 +66,9 @@ function Dashboard() {
       } else {
         alert('Error enviando tweet');
       }
-    } 
+    } else {
+      alert('Error en el token');
+    }
   }
 
   return (
