@@ -21,9 +21,6 @@ html, #body {
   top: 0;
   left: 0;
   right: 0;
-
-  border-style: solid;
-  border-color: red;
 }
 
 .body {

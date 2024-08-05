@@ -30,9 +30,7 @@ function Dashboard() {
       headerElement.style.left = '0';
       headerElement.style.top = '0';
       headerElement.style.bottom = '0';
-
-      const dashboardElement = document.querySelector('.dashboard') as HTMLElement;
-      dashboardElement.style.marginTop = '250px';
+      headerElement.style.marginLeft = '15px';
     }
 
     setTweets(log.tweets);
@@ -89,8 +87,8 @@ function Dashboard() {
       </div>
       <div className="body">
         <div className="dashboard">
-          <h2>Bienvenido/a a X, <span className='username'>{localStorage.getItem('username')}</span>.</h2>
           <div className="tweet">
+            <h2>Bienvenido/a a X, <span className='username'>{localStorage.getItem('username')}</span>.</h2>
             <h3>Escribir un tweet:</h3>
               <div className="writeTweet">
                 <textarea
@@ -108,7 +106,7 @@ function Dashboard() {
               </div>
           </div>
           <div className="feed">
-            <h3>Tweets recientes:</h3>
+            <h3>Tweets de hoy:</h3>
             {/* iterates through the tweets and displays them */}
             {tweets.map((tweet: {
               username: string;

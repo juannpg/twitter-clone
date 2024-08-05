@@ -29,10 +29,19 @@ router.get('/token', async (req, res) => {
   }
 });
 
-//gets the 3 last tweets
+//gets the todays tweets
 router.get('/getTweets', async (req, res) => {
   try {
+    const today = new Date();
+    const yesterday = new Date(today.getTime() - 24 * 60 * 60 * 1000);
+
     const tweets = await prisma.tweet.findMany({
+      where: {
+        createdAt: {
+          gte: yesterday,
+          lte: today,
+        }
+      },
       select: {
         username: true,
         content: true,
@@ -41,7 +50,6 @@ router.get('/getTweets', async (req, res) => {
       orderBy: {
         createdAt: 'desc',
       },
-      take: 6,
     });
 
     res.status(200).json({ tweets, message: 'Tweets retrieved successfully' });
