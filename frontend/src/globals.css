@@ -11,6 +11,10 @@ html, #body {
 .main {
   display: flex;
   justify-content: center;
+  width: 400px;
+
+  border-style: solid;
+  border-color: red;
 }
 
 .header {
@@ -31,6 +35,10 @@ html, #body {
   color: white;
   padding: 15px;
   position: relative;
+  width: 100%;
+
+  border-style: solid;
+  border-color: rgb(68, 0, 255);
 }
 
 .classicButton {

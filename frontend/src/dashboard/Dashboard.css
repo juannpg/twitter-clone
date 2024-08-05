@@ -1,3 +1,17 @@
+@media (max-width: 768px) {
+  .dashboard {
+    width: 400px;
+  }
+
+  .tweet {
+    width: 400px;
+  }
+
+  .tweetInput, .writeTweet, .feed {
+    width: 380px;
+  }
+}
+
 .dashboard {
   display: flex;
   flex-direction: column;
