@@ -29,6 +29,7 @@ function Dashboard() {
 
   //gets the tweets when the component is loaded
   //useEffect allows the code inside the effect to run only after the render is completed, and not during the render cycle itself.
+  //cada vez que se utiliza useState, el render se reinicia. en este caso: se inicia el render, llega a getTweets(), usa useState, se recarga todo; quedando en un loop infinito.
   useEffect(() => {
     getTweets();
   }, []);
