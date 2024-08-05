@@ -29,6 +29,7 @@ router.get('/token', async (req, res) => {
   }
 });
 
+//gets the 3 last tweets
 router.get('/getTweets', async (req, res) => {
   try {
     const tweets = await prisma.tweet.findMany({
@@ -49,6 +50,7 @@ router.get('/getTweets', async (req, res) => {
   }
 });
 
+//creates a new tweet
 router.post('/writeTweet', async (req, res) => {
   const { username, content } = req.body;
 
