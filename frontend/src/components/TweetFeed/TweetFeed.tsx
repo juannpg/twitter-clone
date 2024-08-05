@@ -7,7 +7,7 @@ const TweetFeed = ({username, tweet, likes}:{username: string, tweet: string, li
     <div className='tweetFeed'>
       <h4>@{username}</h4>
       <div className="tweetContent">
-        <p>{tweet}</p>
+        <p className='tweetText'>{tweet}</p>
       </div>
       <div className="tweetFooter">
         <p

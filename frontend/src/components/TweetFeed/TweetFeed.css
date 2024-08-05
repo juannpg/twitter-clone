@@ -2,6 +2,10 @@ p.likes {
   cursor: pointer;
 }
 
+.tweetText {
+  width: 100%;
+}
+
 .lineTweet {
   width: 100%;
   margin-top: 10px;

@@ -38,7 +38,6 @@ function Dashboard() {
     if (tweet.length > 250) {
       alert('El tweet no puede tener más de 250 caracteres');
       setTweet('');
-      window.location.reload();
     } else {
       writeTweet();
     }

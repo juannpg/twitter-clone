@@ -76,6 +76,9 @@ function Login() {
             <button
               className='classicButton'
               id='black'
+              onClick={() =>
+                navigate('/upsi')
+              }
             >¿Olvidaste tu contraseña?</button>
           </div>
           <Link 

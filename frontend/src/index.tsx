@@ -6,6 +6,7 @@ import App from './App';
 import Login from './login/Login';
 import Register from './register/Register';
 import Dashboard from './dashboard/Dashboard';
+import Upsi from './upsi/Upsi';
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(
@@ -16,6 +17,7 @@ root.render(
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/upsi" element={<Upsi />} />
       </Routes>
     </Router>
   </React.StrictMode>
