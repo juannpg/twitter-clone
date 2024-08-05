@@ -1,6 +1,7 @@
 @media (max-width: 768px) {
   .dashboard {
     width: 400px;
+    margin-left: 540px;
   }
 
   .tweet {
