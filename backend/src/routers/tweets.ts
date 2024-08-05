@@ -41,7 +41,7 @@ router.get('/getTweets', async (req, res) => {
       orderBy: {
         createdAt: 'desc',
       },
-      take: 3,
+      take: 6,
     });
 
     res.status(200).json({ tweets, message: 'Tweets retrieved successfully' });

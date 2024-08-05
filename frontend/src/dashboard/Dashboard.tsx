@@ -24,6 +24,14 @@ function Dashboard() {
     const log = await response.json();
     console.log(log);
 
+    if (log.tweets.length > 2) {
+      const headerElement = document.querySelector('.header') as HTMLElement;
+      headerElement.style.right = 'unset';
+      headerElement.style.left = '0';
+      headerElement.style.top = '0';
+      headerElement.style.bottom = '0';
+    }
+
     setTweets(log.tweets);
   }
 

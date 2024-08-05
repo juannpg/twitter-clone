@@ -16,9 +16,14 @@ html, #body {
 .header {
   display: flex;
   justify-content: center;
-  width: 100%;
+  align-items: center;
   position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
+
+  border-style: solid;
+  border-color: red;
 }
 
 .body {
