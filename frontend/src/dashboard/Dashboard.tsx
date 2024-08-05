@@ -24,15 +24,6 @@ function Dashboard() {
     const log = await response.json();
     console.log(log);
 
-    if (log.tweets.length > 2) {
-      const headerElement = document.querySelector('.header') as HTMLElement;
-      headerElement.style.right = 'unset';
-      headerElement.style.left = '0';
-      headerElement.style.top = '0';
-      headerElement.style.bottom = '0';
-      headerElement.style.marginLeft = '15px';
-    }
-
     setTweets(log.tweets);
   }
 
@@ -82,7 +73,7 @@ function Dashboard() {
 
   return (
     <div className="main">
-      <div className="header">
+      <div className="headerDashboard">
         <img src="https://img.icons8.com/?size=100&id=jlpBF1fJe9fs&format=png&color=FFFFFF" alt="twitterLogo" className="twitterLogo" />
       </div>
       <div className="body">
