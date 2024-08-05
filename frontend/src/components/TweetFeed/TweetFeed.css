@@ -2,10 +2,17 @@ p.likes {
   cursor: pointer;
 }
 
-.line {
+.lineTweet {
   width: 100%;
   margin-top: 10px;
   height: 3px;
+  position: absolute;
+  bottom: -35px;
+}
+
+.tweetFeed {
+  position: relative;
+  margin-bottom: 50px;
 }
 
 .tweetContent {
@@ -15,4 +22,17 @@ p.likes {
   border-radius: 6px;
   padding-bottom: 5px;
   padding-left: 15px;
+}
+
+.tweetFooter {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  right: 10px;
+  bottom: -42px;
+}
+
+.replyLink {
+  margin-left: 40px;
 }

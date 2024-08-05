@@ -4,12 +4,8 @@
   text-align: left;
 }
 
-.main {
-  width: 800px;
-}
-
 .body, .dashboard {
-  width: 100%;
+  width: 800px;
 }
 
 .tweetInput {
